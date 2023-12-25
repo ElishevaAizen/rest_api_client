@@ -1,10 +1,10 @@
-from rest_api_client import RESTAPIClient
+from rest_api_client import RestAPIClient
 
 def main():
   url="https://resttest10.herokuapp.com"
   
   #create an instace for rest_api_client object
-  rest_api_client=RESTAPIClient(url)
+  rest_api_client=RestAPIClient(url)
   
   ####Task_1####
   #get response for serial 1
