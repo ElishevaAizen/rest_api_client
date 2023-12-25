@@ -39,7 +39,7 @@ class RESTAPIClient:
             }
             return data
             except Exception as e:
-            raise Exception(f"Error occurred while getting Json data for posting: {str(e)}")
+            raise Exception(f"Error occurred while getting data for posting: {str(e)}")
         
         def send_request(self,data):
             Try:
