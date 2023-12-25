@@ -13,7 +13,7 @@ class RESTAPIClient:
     def base_url(self, url):  # setter
         self._base_url=url
   
-    def get_replay(self,serial):
+    def get_replay(self,serial): #api get request with serial
         try :
         response = requests.get(f"{self.base_url}/api/responses?serial={serial}")
         response.raise_for_status()
@@ -22,7 +22,7 @@ class RESTAPIClient:
         raise Exception(f"Error occurred while getting data for serial {serial}:{str(e)}")
         
       @staticmethod
-        def get_data(response_1, response_2):
+        def get_data(response_1, response_2): #get JSON data
         try:
             data = {
                 "serial": 3,
@@ -49,7 +49,7 @@ class RESTAPIClient:
             except Exception as e:
             raise Exception(f"Error occurred while getting data for posting: {str(e)}")
         
-        def send_request(self,data):
+        def send_request(self,data): #api post request with data to process
             Try:
             response = requests.post(f"{self.base_url}/api/process", json=data)
             response.raise_for_status()
