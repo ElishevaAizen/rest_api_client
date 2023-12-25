@@ -1,7 +1,7 @@
 import requests
 from datetime import date
 
-class RESTAPIClient:
+class RestAPIClient:
     def __init__(self,base_url):
         self._base_url= base_url
 
