@@ -6,11 +6,11 @@ class RestAPIClient:
         self._base_url= base_url
 
    @property
-    def base_url(self):  # getter
+    def base_url(self):  #getter
         return self._base_url
  
 @base_url.setter
-    def base_url(self, url):  # setter
+    def base_url(self, url):  #setter
         self._base_url=url
   
     def get_replay(self,serial): #api get request with serial
@@ -49,7 +49,7 @@ class RestAPIClient:
             except Exception as e:
             raise Exception(f"Error occurred while getting data for posting: {str(e)}")
         
-        def send_request(self,data): #api post request with data to process
+        def send_request(self,data): #api post request
             Try:
             response = requests.post(f"{self.base_url}/api/process", json=data)
             response.raise_for_status()
