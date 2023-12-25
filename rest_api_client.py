@@ -20,9 +20,7 @@ class RestAPIClient:
         return response.json()
         except Exception as e:
         raise Exception(f"Error occurred while getting data for serial {serial}:{str(e)}")
-@classmethod
-def get_max_value()
-      
+        
 @staticmethod
         def get_data(response_1, response_2): #get JSON data
         try:
@@ -51,7 +49,8 @@ def get_max_value()
             except Exception as e:
             raise Exception(f"Error occurred while getting data for posting: {str(e)}")
         
-        def send_request(self,data): #api post request
+        def send_request(self,response_1,response_2): #api post request
+            data=get_data(response_1,response_2)
             Try:
             response = requests.post(f"{self.base_url}/api/process", json=data)
             response.raise_for_status()
