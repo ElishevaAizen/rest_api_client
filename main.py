@@ -20,7 +20,8 @@ def main():
   #send the data for posting request
   response=rest_api_client.send_request(data)
   #check if posting is done successfully
-  assertFalse(response.ok,"correct")
+  assert(response.ok)
+  print ("correct")
   
   if __name__ == "__main__":
   main()
