@@ -8,6 +8,10 @@ class RESTAPIClient:
    @property
     def base_url(self):  # getter
         return self._base_url
+ 
+@base_url.setter
+    def base_url(self, url):  # setter
+        self._base_url=url
   
     def get_replay(self,serial):
         try :
