@@ -9,7 +9,7 @@ class RestAPIClient:
     def base_url(self):  #getter
         return self._base_url
  
-@base_url.setter
+   @base_url.setter
     def base_url(self, url):  #setter
         self._base_url=url
   
@@ -21,8 +21,9 @@ class RestAPIClient:
         except Exception as e:
         raise Exception(f"Error occurred while getting data for serial {serial}:{str(e)}")
         
-        def get_data(response_1, response_2): #get JSON data
-        try:
+    def send_request(self,response_1,response_2): #api post request
+        def get_data(): #get JSON data
+            try:
             data = {
                 "serial": 3,
                 "message": {
@@ -44,14 +45,11 @@ class RestAPIClient:
                     }
                 }
             }
-            return data
             except Exception as e:
             raise Exception(f"Error occurred while getting data for posting: {str(e)}")
-        
-        def send_request(self,response_1,response_2): #api post request
-            data=get_data(response_1,response_2)
-            Try:
-            response = requests.post(f"{self.base_url}/api/process", json=data)
-            response.raise_for_status()
-            except Exception as e:
-            raise Exception(f"Error occurred while posting data: {str(e)}")
+        get_data()    
+        Try:
+        response = requests.post(f"{self.base_url}/api/process", json=data)
+        response.raise_for_status()
+        except Exception as e:
+        raise Exception(f"Error occurred while posting data: {str(e)}")
