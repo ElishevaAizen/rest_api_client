@@ -16,7 +16,7 @@ def main():
   
   ####Task_2####
   #get data for posting request
-  data=rest_api_client.get_data(response_1,response_2)
+  data=RESTAPIClient.get_data(response_1,response_2)
   #send the data for posting request
   response=rest_api_client.send_request(data)
   #check if posting is done successfully
