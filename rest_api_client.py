@@ -4,10 +4,14 @@ from datetime import date
 class RESTAPIClient:
     def __init__(self,base_url):
         self._base_url= base_url
-        
+
+   @property
+    def base_url(self):  # getter
+        return self._base_url
+  
     def get_replay(self,serial):
         try :
-        response = requests.get(f"{self._base_url}/api/responses?serial={serial}")
+        response = requests.get(f"{self.base_url}/api/responses?serial={serial}")
         response.raise_for_status()
         return response.json()
         except Exception as e:
@@ -43,7 +47,7 @@ class RESTAPIClient:
         
         def send_request(self,data):
             Try:
-            response = requests.post(f"{self._base_url}/api/process", json=data)
+            response = requests.post(f"{self.base_url}/api/process", json=data)
             response.raise_for_status()
             except Exception as e:
             raise Exception(f"Error occurred while posting data: {str(e)}")
