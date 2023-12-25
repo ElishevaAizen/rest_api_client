@@ -20,8 +20,10 @@ class RestAPIClient:
         return response.json()
         except Exception as e:
         raise Exception(f"Error occurred while getting data for serial {serial}:{str(e)}")
-        
-      @staticmethod
+@classmethod
+def get_max_value()
+      
+@staticmethod
         def get_data(response_1, response_2): #get JSON data
         try:
             data = {
