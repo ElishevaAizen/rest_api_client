@@ -1,2 +1,2 @@
 # rest_api_client
-rest api requests in python
+INTERVIEW TASK : rest api requests includes "GET" and "POST" requests in python
