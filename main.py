@@ -15,10 +15,8 @@ def main():
   print(response_2)
   
   ####Task_2####
-  #get data for posting request
-  data=RESTAPIClient.get_data(response_1,response_2)
-  #send the data for posting request
-  response=rest_api_client.send_request(data)
+  #send the responses for posting request
+  response=rest_api_client.send_request(response_1,response_2)
   #check if posting is done successfully
   assert(response.ok)
   print ("correct")
